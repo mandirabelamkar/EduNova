@@ -1,0 +1,1695 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7fbf7;
+    color: #202044
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+button,
+input,
+select {
+    font: inherit
+}
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 30px;
+    align-items: center;
+    padding: 35px;
+    background: linear-gradient(135deg, #f0fff4, #fff)
+}
+
+.login-left {
+    min-height: 560px;
+    border: 1px solid #b8e0d5;
+    border-radius: 24px;
+    padding: 42px 45px 30px;
+    background: linear-gradient(145deg, #e8faf4 0%, #f8fcf1 54%, #fff4d8 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative
+}
+
+.learning-lab-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.brand { display: inline-flex; align-items: center }
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    display: inline-grid;
+    place-items: center;
+    position: relative;
+    border-radius: 12px 12px 12px 4px;
+    background: #087f78;
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1;
+    box-shadow: 4px 4px 0 #f2a15a;
+    transform: rotate(-5deg)
+}
+
+.brand-mark::after {
+    content: '✦';
+    position: absolute;
+    top: -11px;
+    right: -10px;
+    color: #e18b23;
+    font-size: 15px;
+    transform: rotate(5deg)
+}
+
+.sidebar-brand { display: flex; align-items: center; gap: 12px }
+
+.sidebar-brand .brand-mark { width: 30px; height: 30px; border-radius: 9px 9px 9px 3px; font-size: 19px; box-shadow: 3px 3px 0 #f2a15a }
+
+.sidebar-brand .brand-mark::after { top: -8px; right: -8px; font-size: 11px }
+
+.lab-status {
+    color: #087f78;
+    background: #d8f2e9;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: .8px
+}
+
+.lab-kicker {
+    color: #e18b23;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    margin-top: 48px
+}
+
+.login-left h1 {
+    font-size: 42px;
+    line-height: 1.08;
+    color: #087f78;
+    margin: 10px 0 12px
+}
+
+.login-left h1 em {
+    color: #e18b23;
+    font-style: normal
+}
+
+.login-left p {
+    font-size: 16px;
+    max-width: 420px;
+    color: #385b60;
+    line-height: 1.5
+}
+
+.subject-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 24px
+}
+
+.subject-chips span {
+    background: #fff;
+    border: 1px solid #cce7dc;
+    border-radius: 20px;
+    color: #087f78;
+    padding: 8px 11px;
+    font-size: 12px;
+    font-weight: bold
+}
+
+.study-scene {
+    height: 190px;
+    margin-top: 20px;
+    position: relative;
+    border-bottom: 9px solid #8d5b43;
+    border-radius: 0 0 10px 10px
+}
+
+.study-board {
+    width: 220px;
+    display: grid;
+    gap: 5px;
+    padding: 15px;
+    position: absolute;
+    left: 12%;
+    top: 10px;
+    background: #fff;
+    border: 1px solid #dce9df;
+    border-radius: 12px;
+    box-shadow: 8px 10px 0 #d4eadf;
+    transform: rotate(-3deg)
+}
+
+.study-board span { font-size: 22px }
+.study-board b { color: #087f78; font-size: 13px }
+.study-board strong { color: #385b60; font-size: 12px }
+.mini-progress { height: 7px; background: #e8eee9; border-radius: 10px; overflow: hidden; margin-top: 5px }
+.mini-progress i { display: block; width: 72%; height: 100%; background: #f4a340 }
+
+.desk { position: absolute; right: 8%; bottom: 0; font-size: 65px; white-space: nowrap }
+.desk-lamp { font-size: 35px; vertical-align: top }
+.student { position: relative; z-index: 1 }
+.open-book { font-size: 47px; margin-left: -15px }
+
+.lab-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #087f78;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px
+}
+
+.login-card {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px #0001;
+    max-width: 440px;
+    width: 100%;
+    margin: auto
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-top: 25px
+}
+
+.register-card { padding-top: 27px }
+.form-back { color: #087f78; font-size: 12px; font-weight: bold }
+.register-card .eyebrow { display: block; margin-top: 28px }
+.register-card h2 { text-align: left; margin-top: 7px; color: #183b4e; font-size: 27px }
+.register-card>p:not(.small) { text-align: left; margin-bottom: 18px }
+.register-card button span { margin-left: 7px }
+.register-note { margin-top: 18px !important }
+.form-step { display: flex; align-items: center; gap: 7px; margin-top: 24px }
+.form-step span { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #e3eee9; color: #66817d; font-size: 11px; font-weight: bold }
+.form-step span.step-active { background: #087f78; color: white }
+.form-step i { width: 28px; height: 2px; background: #dcebe4 }
+
+.login-card>p {
+    text-align: center;
+    color: #666;
+    margin: 10px 0 22px
+}
+
+.language {
+    float: right;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 8px
+}
+
+.login-card label {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 15px 0 7px
+}
+
+.login-card input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px
+}
+
+.login-card button {
+    width: 100%;
+    padding: 13px;
+    border: 0;
+    border-radius: 8px;
+    background: #087f78;
+    color: white;
+    margin-top: 22px;
+    cursor: pointer
+}
+
+.forgot {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #087f78;
+    margin-top: 8px
+}
+
+.small {
+    font-size: 13px !important
+}
+
+.small a {
+    color: #087f78
+}
+
+.guest {
+    background: white !important;
+    color: #333 !important;
+    border: 1px solid #ddd !important
+}
+
+.app {
+    display: flex;
+    min-height: 100vh
+}
+
+.app-body {
+    padding-left: 230px
+}
+
+.sidebar {
+    width: 230px;
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 5;
+    background: white;
+    padding: 22px;
+    box-shadow: 2px 0 12px #0001;
+    display: flex;
+    flex-direction: column
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 25px
+}
+
+.user {
+    background: #e7f6f0;
+    padding: 12px;
+    border-radius: 10px
+}
+
+.user small {
+    display: block;
+    margin: 5px 0 0 28px;
+    color: #777
+}
+
+.sidebar nav {
+    margin-top: 20px;
+    display: grid;
+    gap: 7px
+}
+
+.sidebar nav a,
+.logout {
+    padding: 11px;
+    border-radius: 8px
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+    background: #087f78;
+    color: white
+}
+
+.logout {
+    margin-top: auto
+}
+
+.main {
+    flex: 1;
+    padding: 25px;
+    max-width: 1200px;
+    margin: auto
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px
+}
+
+.hero {
+    background: #e5f6ed;
+    border-radius: 12px;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.game-hero {
+    background: linear-gradient(120deg, #e5f6ed 0%, #e8f5f4 100%);
+    border: 1px solid #dce9dc;
+    min-height: 190px;
+    overflow: hidden;
+    position: relative
+}
+
+.eyebrow {
+    color: #087f78;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px
+}
+
+.game-hero h1 {
+    margin: 8px 0 6px;
+    font-size: 30px
+}
+
+.game-hero p { margin-bottom: 18px }
+
+.hero-button { padding: 11px 16px }
+
+.hero-button span,
+.button-link span { margin-left: 6px }
+
+.hero h1 {
+    font-size: 22px
+}
+
+.hero-art {
+    width: 250px;
+    height: 145px;
+    position: relative;
+    flex: 0 0 250px;
+    border-radius: 18px;
+    background: #fff8e8;
+    border: 1px solid #f3dfb5;
+    overflow: hidden
+}
+
+.journey-path {
+    position: absolute;
+    width: 185px;
+    height: 70px;
+    left: 34px;
+    bottom: -28px;
+    border: 10px solid #f2a15a;
+    border-bottom: 0;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-8deg)
+}
+
+.journey-book,
+.journey-trophy,
+.journey-star,
+.journey-badge { position: absolute; z-index: 1 }
+.journey-book { left: 35px; bottom: 25px; font-size: 48px; transform: rotate(-8deg) }
+.journey-trophy { right: 30px; top: 20px; font-size: 42px; transform: rotate(8deg) }
+.journey-star { left: 24px; top: 18px; color: #e18b23; font-size: 23px }
+.journey-badge { right: 19px; bottom: 22px; padding: 5px 8px; border-radius: 8px; background: #087f78; color: #fff; font-size: 11px; font-weight: 800; transform: rotate(-8deg) }
+
+.stats,
+.progress-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin: 18px 0
+}
+
+.stats>div,
+.progress-summary>div {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px #0000000d
+}
+
+.stat-card { position: relative; overflow: hidden }
+
+.stat-card::after {
+    content: '';
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    right: -18px;
+    bottom: -18px;
+    border-radius: 50%;
+    background: #f1edff
+}
+
+.streak-stat::after { background: #fff0d5 }
+
+.stat-note {
+    display: block;
+    color: #18a653;
+    font-size: 11px;
+    margin-top: 8px
+}
+
+.xp-toast {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 20;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: #087f78;
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 10px 24px #087f7840;
+    animation: xp-rise 1.8s ease both
+}
+
+.level-toast { background: #e18b23; box-shadow: 0 10px 24px #e18b2340 }
+
+.confetti-piece {
+    position: fixed;
+    top: 18%;
+    z-index: 19;
+    width: 8px;
+    height: 14px;
+    pointer-events: none;
+    animation: confetti-fall 1.2s ease-out forwards
+}
+
+@keyframes xp-rise {
+    0% { opacity: 0; transform: translateY(14px) scale(.94) }
+    15%, 75% { opacity: 1; transform: translateY(0) scale(1) }
+    100% { opacity: 0; transform: translateY(-18px) scale(1.02) }
+}
+
+@keyframes confetti-fall {
+    0% { opacity: 1; transform: translate(0, 0) rotate(0) }
+    100% { opacity: 0; transform: translate(var(--x), var(--y)) rotate(560deg) }
+}
+
+.level-card { padding: 18px 22px }
+
+.level-heading,
+.level-footer,
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px
+}
+
+.level-heading h2 { margin: 3px 0 }
+
+.level-heading strong { color: #18a653; font-size: 20px }
+
+.level-badge {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: #087f78;
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    box-shadow: 0 6px 12px #087f7833
+}
+
+.xp-track {
+    height: 12px;
+    margin: 16px 0 10px;
+    border-radius: 20px;
+    background: #ece9f3;
+    overflow: hidden
+}
+
+.xp-track span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #087f78, #36b56b)
+}
+
+.level-footer { color: #777; font-size: 12px }
+
+.level-footer a,
+.panel-heading>a { color: #087f78; font-size: 12px; font-weight: bold }
+
+.stats b,
+.progress-summary b {
+    display: block;
+    font-size: 22px;
+    margin: 5px
+}
+
+.stats small,
+.progress-summary small {
+    color: #777
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px
+}
+
+.panel {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px #0000000d
+}
+
+.panel h3,
+.panel h2 {
+    margin-bottom: 15px
+}
+
+.mission-panel,
+.reward-panel { min-height: 225px }
+
+.mission-panel .panel-heading h3,
+.reward-panel .panel-heading h3,
+.quests-panel .panel-heading h3 { margin: 4px 0 0 }
+
+.mission-icon,
+.chest {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: #dff2ed;
+    font-size: 24px
+}
+
+.chest { background: #fff0d4 }
+
+.muted { color: #777; font-size: 13px }
+
+.mission-progress { margin: 24px 0 16px }
+
+.mission-progress>div:first-child { display: flex; justify-content: space-between; font-size: 12px }
+
+.mission-progress span { color: #777 }
+
+.claim-button,
+.quest-claim {
+    border: 0;
+    border-radius: 8px;
+    padding: 9px 13px;
+    background: #087f78;
+    color: white;
+    cursor: pointer;
+    font-weight: bold
+}
+
+.reward-panel .claim-button { margin-top: 12px }
+
+.claim-button:disabled,
+.quest-claim:disabled { background: #a6cfae; cursor: default }
+
+.quest-list { display: grid; gap: 14px }
+
+.quest-item { min-height: 54px }
+
+.quest-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    flex: 0 0 auto
+}
+
+.quest-icon.blue { background: #e7f2ff }
+.quest-icon.orange { background: #fff0db }
+.quest-icon.purple { background: #e8f5f4 }
+
+.quest-copy { flex: 1; min-width: 0 }
+
+.quest-copy small { display: block; color: #777; margin: 4px 0 }
+
+.quest-copy .progress { width: 100%; max-width: none; margin-top: 5px }
+
+.quest-reward { color: #18a653; font-size: 12px; font-weight: bold }
+
+.quest-item.claimed { opacity: .62 }
+
+.quest-item.claimed .progress span { background: #18a653 }
+
+.course,
+.quest {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.course small {
+    display: block;
+    color: #777;
+    margin: 5px 0
+}
+
+.progress {
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+    width: 220px
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: #36b56b
+}
+
+.course button,
+.button-link {
+    background: #087f78;
+    color: white;
+    border: 0;
+    padding: 9px 14px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.button-link { display: inline-block }
+
+.recommend {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px
+}
+
+.recommend div {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px
+}
+
+.recommend-card {
+    display: grid;
+    gap: 5px;
+    color: #202044;
+    transition: transform .2s, box-shadow .2s
+}
+
+.recommend-card:hover { transform: translateY(-3px); box-shadow: 0 8px 18px #00000012 }
+
+.recommend-card>span { font-size: 25px }
+.recommend-card small { color: #777 }
+.recommend-card strong { color: #087f78; font-size: 12px; margin-top: 5px }
+.purple-card { background: #f5f0ff }
+.orange-card { background: #fff5e5 }
+.blue-card { background: #edf7ff }
+
+.simple-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 25px
+}
+
+.page-header h1 {
+    font-size: 22px
+}
+
+.game-page-header {
+    border: 0;
+    padding: 10px 2px 22px;
+    align-items: flex-start
+}
+
+.game-page-header h1 { margin: 5px 0 4px; font-size: 30px }
+.game-page-header p { color: #777; font-size: 13px }
+.header-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; background: #dff2ed; font-size: 25px }
+
+.subjects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    align-items: stretch;
+    grid-auto-rows: 1fr
+}
+
+.subject {
+    min-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: 42px
+}
+.subjects .subject { height: 100%; min-height: 190px }
+.learning-trail { display: flex; align-items: center; gap: 18px; margin-top: 16px; padding: 16px 20px; border: 1px solid #cfe5f8; border-radius: 14px; background: linear-gradient(105deg, #e7f4ff, #f9fcff); box-shadow: 0 8px 18px #173a5d0b }
+.learning-trail>div:first-child { display: flex; align-items: center; gap: 10px; min-width: 230px }
+.trail-icon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: #fff; font-size: 22px }
+.learning-trail b { display: block; color: #172b4d; font-size: 13px }
+.learning-trail small { display: block; color: #6d8194; font-size: 11px; margin-top: 3px }
+.trail-step { min-width: 105px }
+.trail-step.current b { color: #2774e6 }
+.trail-line { flex: 1; height: 2px; min-width: 20px; background: #9acaf1; position: relative }
+.trail-line::after { content: '›'; position: absolute; right: -2px; top: -10px; color: #2774e6; font-size: 18px }
+
+@media(max-width:700px) {
+    .learning-trail { align-items: flex-start; flex-wrap: wrap; gap: 12px }
+    .learning-trail>div:first-child { width: 100% }
+    .trail-line { display: none }
+}
+
+.subject { align-items: flex-start; justify-content: flex-start; padding: 22px; gap: 7px; font-size: 15px; transition: transform .2s, box-shadow .2s }
+.subject:hover { transform: translateY(-4px); box-shadow: 0 10px 20px #00000012 }
+.subject>span { font-size: 38px; margin-bottom: 8px }
+.subject b { font-size: 17px }
+.subject small { color: #777; font-size: 12px }
+.subject strong { color: #087f78; font-size: 12px; margin-top: auto }
+.journey-banner { display: flex; align-items: center; gap: 14px; background: #fff4d5; border: 1px solid #f0df9c }
+.journey-banner>span { font-size: 28px }
+.journey-banner div { flex: 1 }
+.journey-banner small { display: block; color: #777; margin-top: 5px }
+
+.quest-header { padding-bottom: 18px }
+.quest-crown { display: grid; justify-items: center; color: #e18b23; font-size: 32px }
+.quest-crown small { color: #087f78; font-size: 10px; font-weight: bold; margin-top: 4px }
+.quest-banner { display: flex; align-items: center; gap: 18px; padding: 20px 24px; margin-bottom: 16px; border-radius: 16px; background: linear-gradient(105deg, #fff2c9, #fffaf0); border: 1px solid #f2dda0; box-shadow: 0 8px 18px #e9c45b22 }
+.quest-banner-art { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 17px; background: #fff; font-size: 31px; box-shadow: 0 5px 10px #dcae3d33 }
+.quest-banner h2 { color: #183b4e; margin: 3px 0; font-size: 21px }
+.quest-banner p { color: #7c6a39; font-size: 12px }
+.streak-dots { display: flex; gap: 6px; margin-left: auto }
+.streak-dots i { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; background: #36b56b; color: #fff; font-size: 11px; font-style: normal; font-weight: bold }
+.streak-dots i.today { background: #e18b23; box-shadow: 0 0 0 4px #f9df9d }
+.quest-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 22px }
+.quest-stats div { display: grid; grid-template-columns: auto 1fr; column-gap: 10px; align-items: center; padding: 14px; border-radius: 12px; background: #fff; box-shadow: 0 4px 14px #0000000a }
+.quest-stats span { grid-row: span 2; font-size: 23px }
+.quest-stats b { font-size: 16px; color: #183b4e }
+.quest-stats small { color: #777; font-size: 10px }
+.quest-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(280px, .9fr); gap: 22px; align-items: start }
+.quest-main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px }
+.quest-main .section-title { grid-column: 1 / -1; margin-bottom: 2px }
+.section-title { display: flex; align-items: flex-end; justify-content: space-between; padding: 3px 2px 4px }
+.section-title h2 { color: #183b4e; font-size: 21px; margin-top: 4px }
+.quest-date { color: #777; font-size: 10px; font-weight: bold; letter-spacing: .7px }
+.quest-card { display: flex; align-items: flex-start; flex-direction: column; gap: 14px; min-height: 190px; padding: 22px; border-radius: 15px; background: #fff; border: 1px solid #e7ece8; box-shadow: 0 5px 14px #0000000a; border-left: 5px solid #36b56b; transition: transform .2s, box-shadow .2s }
+.quest-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px #00000012 }
+.quest-card-blue { border-left-color: #3a9bd5 }
+.quest-card-orange { border-left-color: #f4a340 }
+.quest-card-green { border-left-color: #36b56b }
+.quest-card-icon { display: grid; place-items: center; width: 48px; height: 48px; flex: 0 0 auto; border-radius: 14px; font-size: 24px; background: #e5f2fb }
+.quest-card-orange .quest-card-icon { background: #fff0d8 }
+.quest-card-green .quest-card-icon { background: #e2f5e9 }
+.quest-card-content { flex: 1; min-width: 0 }
+.quest-card-title { display: flex; justify-content: space-between; gap: 10px; align-items: start }
+.quest-type { color: #087f78; font-size: 9px; font-weight: bold; letter-spacing: .9px }
+.quest-card h3 { color: #183b4e; font-size: 15px; margin: 3px 0 5px }
+.quest-card-title strong { color: #e18b23; font-size: 13px; white-space: nowrap }
+.quest-card p { color: #777; font-size: 11px; margin-bottom: 9px }
+.quest-card-progress { display: flex; align-items: center; gap: 10px }
+.quest-card-content { width: 100% }
+.quest-card-progress { width: 100%; margin-top: 12px }
+.quest-card-progress .progress { width: 100%; max-width: 230px; height: 7px; margin: 0 }
+.quest-card-progress small { color: #777; font-size: 10px; white-space: nowrap }
+.quest-action { border: 0; border-radius: 8px; padding: 9px 12px; color: #fff; background: #087f78; cursor: pointer; font-size: 11px; font-weight: bold; white-space: nowrap; text-decoration: none }
+.quest-card-orange .quest-action { background: #e18b23 }
+.quest-card-green .quest-action { background: #36b56b }
+.quest-side { min-height: 300px; padding: 28px 24px; text-align: center; background: linear-gradient(160deg, #e5f6ed, #f3fbf7); border: 1px solid #cde8db; border-radius: 16px; box-shadow: 0 7px 17px #0000000a }
+.side-title { display: flex; justify-content: space-between; align-items: center }
+.side-title>span:last-child { font-size: 22px }
+.chest-large { display: grid; place-items: center; width: 92px; height: 92px; margin: 22px auto 12px; border-radius: 50%; background: #fff6d7; border: 7px solid #ffe8a3; font-size: 45px; box-shadow: 0 7px 0 #e9d592 }
+.quest-side h3 { color: #183b4e; font-size: 17px }
+.quest-side p { color: #6c7d7d; font-size: 12px; line-height: 1.5; margin: 7px 0 15px }
+.chest-progress { height: 8px; background: #d9ebe2; border-radius: 10px; overflow: hidden }
+.chest-progress span { display: block; height: 100%; border-radius: inherit; background: #e18b23 }
+.quest-side>small { display: block; color: #6c7d7d; font-size: 10px; margin: 7px 0 15px }
+.chest-button { width: 100%; border: 1px solid #b8d9ca; background: #fff; color: #087f78; padding: 9px; border-radius: 8px; font-size: 11px; font-weight: bold }
+
+.subject b {
+    font-size: 16px
+}
+
+.math {
+    background: #eaf9e9
+}
+
+.science {
+    background: #eaf3ff
+}
+
+.english {
+    background: #fff5df
+}
+
+.marathi {
+    background: #f8eefe
+}
+
+.social {
+    background: #fff0df
+}
+
+.gk {
+    background: #e5faf5
+}
+
+.highlights {
+    margin-top: 25px;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px
+}
+
+.highlights p {
+    margin: 10px
+}
+
+.quiz-page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px
+}
+
+.quiz-top {
+    display: flex;
+    gap: 20px;
+    align-items: center
+}
+
+.game-quiz-top { background: white; border-radius: 14px; padding: 14px 18px; box-shadow: 0 2px 10px #0000000d }
+.game-quiz-top>div:first-child { display: grid; gap: 4px }
+.quiz-xp { color: #18a653; font-size: 12px; font-weight: bold }
+
+.quiz-progress {
+    flex: 1;
+    height: 10px;
+    background: #ddd;
+    border-radius: 10px
+}
+
+.quiz-progress span {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: #087f78;
+    border-radius: 10px
+}
+
+.quiz-top button {
+    margin-left: auto;
+    border: 0;
+    background: white;
+    font-size: 24px
+}
+
+.question-card {
+    background: white;
+    padding: 35px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px #0001
+}
+
+.question-card h2 {
+    margin-bottom: 25px
+}
+
+.question-meta { display: flex; justify-content: space-between; color: #087f78; font-size: 11px; font-weight: bold; letter-spacing: .7px; margin-bottom: 22px }
+.question-card h3 { font-size: 30px; margin-bottom: 22px }
+
+.answer {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 9px;
+    cursor: pointer
+}
+
+.answer.correct.selected {
+    background: #e1f6e8;
+    border-color: #21a65b
+}
+
+.answer.correct {
+    background: #e1f6e8;
+    border-color: #21a65b
+}
+
+.answer.selected:not(.correct) {
+    background: #ffecec;
+    border-color: #e44
+}
+
+.result {
+    display: none;
+    text-align: center;
+    margin: 25px;
+    padding: 20px;
+    background: #fff8d9;
+    border-radius: 12px
+}
+
+.ai-coach { margin: 0 25px 20px; padding: 15px 18px; border: 1px solid #9bded5; border-left: 5px solid #087f78; border-radius: 12px; background: #e9fbf6; color: #17324d; animation: coach-in .25s ease-out }
+.ai-coach strong { color: #087f78 }
+.ai-coach p { margin-top: 6px; color: #476477; font-size: 13px; line-height: 1.5 }
+@keyframes coach-in { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: translateY(0) } }
+
+.quiz-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap
+}
+
+.quiz-actions button {
+    padding: 12px 25px;
+    border: 1px solid #087f78;
+    background: white;
+    border-radius: 8px
+}
+
+.quiz-actions button:last-child {
+    background: #087f78;
+    color: white
+}
+
+.quiz-actions .ai-button { border-color: #f0c36b; background: #fff4d7; color: #a45d16 }
+
+.bar-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 45px;
+    gap: 12px;
+    align-items: center;
+    margin: 15px 0
+}
+
+.bar {
+    height: 12px;
+    background: #eee;
+    border-radius: 20px;
+    overflow: hidden
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: #36b56b
+}
+
+.chart {
+    font-size: 50px;
+    letter-spacing: 15px;
+    margin: 25px 0
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px
+}
+
+.tabs button {
+    padding: 12px 25px;
+    border: 1px solid #ddd;
+    background: white
+}
+
+.podium {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    margin: 35px
+}
+
+.podium div {
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px
+}
+
+.podium div { min-width: 125px; box-shadow: 0 4px 14px #0000000d }
+.podium-first { transform: translateY(-14px); border: 2px solid #f2c84b }
+.podium div strong { display: block; color: #18a653; margin-top: 5px }
+.podium div small { display: block; color: #777; font-size: 10px; margin-top: 5px }
+
+.ranking div {
+    padding: 16px;
+    background: white;
+    margin: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between
+}
+
+.ranking .you {
+    background: #e5f6e9
+}
+
+.ranking div small { display: block; color: #18a653; font-size: 11px; margin-top: 4px }
+.leaderboard-board { padding: 18px 0 10px; border-radius: 18px; background: linear-gradient(145deg, #ffffffcc, #fff8e5aa); border: 1px solid #d7e7f5; box-shadow: 0 12px 28px #173a5d12 }
+.leaderboard-label { display: flex; justify-content: space-between; margin: 24px 35px 0; color: #087f78; font-size: 11px; letter-spacing: 1px }
+.leaderboard-label b { color: #f0784f; font-size: 10px }
+.leaderboard-board .podium { margin: 22px 35px 30px; align-items: end; gap: 28px }
+.leaderboard-board .podium div { min-width: 150px; padding: 18px 22px; border-radius: 14px 14px 8px 8px; border: 1px solid #d7e7f5; background: #f7fbff; box-shadow: 0 7px 0 #dcecf5 }
+.leaderboard-board .podium-first { padding-top: 27px; border: 2px solid #f0784f; background: #fff6e6; box-shadow: 0 7px 0 #f3d39b; transform: translateY(-14px) }
+.leaderboard-board .podium-medal { display: block; margin-bottom: 8px; font-size: 30px }
+.leaderboard-board .podium div b { font-size: 16px }
+.leaderboard-board .podium div small { color: #6d8194; font-size: 10px }
+.leaderboard-board .ranking { margin: 0 24px }
+.leaderboard-board .ranking div { margin: 8px 0; border: 1px solid #dceaf4; background: #fff; box-shadow: none }
+.leaderboard-board .ranking .you { border: 2px solid #f2a15a; background: #fff7e7; box-shadow: 0 4px 0 #f8d79f }
+
+@media (max-width: 700px) {
+    .leaderboard-board { padding: 12px 8px }
+    .leaderboard-label { margin: 18px 10px 0 }
+    .leaderboard-board .podium { margin: 18px 2px 24px; gap: 7px }
+    .leaderboard-board .podium div { min-width: 0; flex: 1; padding: 13px 6px; font-size: 12px }
+    .leaderboard-board .podium-first { padding-top: 20px }
+    .leaderboard-board .podium-medal { font-size: 24px }
+    .leaderboard-board .podium div b { font-size: 13px }
+    .leaderboard-board .podium div strong { font-size: 12px }
+    .leaderboard-board .ranking { margin: 0 2px }
+}
+.xp-pill { background: #fff4d5; color: #9b6b00; padding: 7px 10px; border-radius: 20px; font-size: 12px }
+.green-text { color: #18a653; font-size: 13px }
+.chart-labels { color: #777; font-size: 12px }
+.streak-calendar { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; margin-top: 18px }
+.streak-calendar > span { display: grid; justify-items: center; gap: 8px; padding: 12px 6px; border: 1px solid #d6e5ed; border-radius: 10px; background: #f2f8fb }
+.streak-calendar i { color: #5c7180; font-size: 10px; font-style: normal; font-weight: 800 }
+.streak-calendar b { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #dbe9ed; color: #5c7180; font-size: 12px }
+.streak-calendar > span.today { border-color: #f0c36b; background: #fff4d7 }
+.streak-calendar > span.today b { background: #f47750; color: #fff }
+.badge-card { min-height: 175px; align-items: center; text-align: center; justify-content: center }
+.badge-card>span { margin-bottom: 0 }
+.badge-card small { color: #18a653 }
+.locked-badge { filter: grayscale(1); opacity: .65 }
+.profile-hero { display: flex; align-items: center; gap: 20px; background: linear-gradient(120deg, #e8f5f4, #fff) }
+.profile-hero>div:nth-child(2) { flex: 1 }
+.profile-hero h2 { margin: 4px 0 }
+.profile-hero p { color: #777; font-size: 13px }
+.avatar-ring { position: relative; width: 86px; height: 86px; display: grid; place-items: center; border-radius: 50%; background: #e7dbff; font-size: 46px; border: 5px solid #8d6bd1 }
+.avatar-ring b { position: absolute; bottom: -8px; background: #087f78; color: white; padding: 4px 7px; border-radius: 10px; font-size: 10px }
+.goal-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px }
+.goal-grid div { display: grid; gap: 5px; padding: 14px; border-radius: 10px; background: #f7f7fb }
+.goal-grid b { font-size: 13px }
+.goal-grid small { color: #777; font-size: 11px }
+.setting-row { border-bottom: 1px solid #eee; padding: 14px 0 }
+.setting-row:last-child { border-bottom: 0 }
+.setting-row label { display: flex; align-items: center; justify-content: space-between; gap: 20px }
+.setting-row label>span { display: grid; gap: 4px }
+.setting-row small { color: #777; font-size: 12px }
+.setting-row input { width: 18px; height: 18px; accent-color: #087f78 }
+.setting-row select { padding: 8px; border: 1px solid #ddd; border-radius: 7px }
+
+@media(max-width:800px) {
+    .login-page {
+        grid-template-columns: 1fr
+    }
+
+    .login-left {
+        min-height: 300px
+    }
+
+    .sidebar {
+        width: 180px
+    }
+
+    .subjects {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .stats,
+    .progress-summary {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .grid2 {
+        grid-template-columns: 1fr
+    }
+
+    .quest-layout { grid-template-columns: 1fr }
+    .quest-main { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+}
+
+@media(max-width:550px) {
+    .app-body {
+        padding-left: 0
+    }
+
+    .login-left {
+        padding: 25px
+    }
+
+    .login-left h1 {
+        font-size: 28px
+    }
+    
+    .lab-kicker { margin-top: 30px }
+    .study-scene { height: 165px }
+    .study-board { left: 0; width: 180px; padding: 11px }
+    .desk { right: -12%; font-size: 52px }
+    .desk-lamp { font-size: 28px }
+    .open-book { font-size: 38px }
+    .lab-footer { gap: 12px; flex-wrap: wrap }
+
+    .sidebar {
+        display: none
+    }
+
+    .main,
+    .simple-page,
+    .quiz-page {
+        padding: 15px
+    }
+
+    .subjects {
+        grid-template-columns: 1fr
+    }
+
+    .recommend {
+        grid-template-columns: 1fr
+    }
+
+    .hero-art {
+        display: none
+    }
+
+    .game-hero h1 { font-size: 24px }
+
+    .level-footer { align-items: flex-start; flex-direction: column; gap: 6px }
+
+    .quest-reward { display: none }
+
+    .stats,
+    .progress-summary {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .bar-row {
+        grid-template-columns: 100px 1fr 35px
+    }
+
+    .podium {
+        gap: 8px
+    }
+
+    .podium div {
+        padding: 10px
+    }
+
+    .chart {
+        letter-spacing: 2px;
+        font-size: 35px
+    }
+
+    .game-page-header h1 { font-size: 24px }
+    .journey-banner { align-items: flex-start; flex-wrap: wrap }
+    .journey-banner .button-link { margin-left: 42px }
+    .game-quiz-top { gap: 9px; padding: 12px }
+    .quiz-xp { display: none }
+    .question-card h3 { font-size: 24px }
+    .profile-hero { align-items: flex-start; flex-wrap: wrap }
+    .profile-hero>div:nth-child(2) { min-width: calc(100% - 106px) }
+    .goal-grid { grid-template-columns: 1fr 1fr }
+
+    .quest-banner { align-items: flex-start; flex-wrap: wrap; padding: 16px }
+    .streak-dots { width: 100%; margin-left: 0; justify-content: center }
+    .quest-stats { grid-template-columns: 1fr 1fr }
+    .quest-layout { grid-template-columns: 1fr }
+    .quest-main { grid-template-columns: 1fr }
+    .quest-card { align-items: flex-start; flex-wrap: wrap }
+    .quest-card-content { min-width: calc(100% - 63px) }
+    .quest-action { margin-left: 63px }
+    .quest-card-progress { flex-wrap: wrap }
+    .quest-card-progress .progress { max-width: 100%; min-width: 170px }
+    .streak-calendar { gap: 5px }
+    .streak-calendar > span { padding: 9px 2px }
+}
+
+/* Shared premium finish for every game-world page. */
+body.app-body {
+    background:
+        radial-gradient(circle at 92% 8%, #e7f5ef 0, transparent 24%),
+        linear-gradient(135deg, #f8fcf9 0%, #f2f8f5 100%);
+}
+
+.sidebar {
+    border-right: 1px solid #e2eee8;
+    background: rgba(255, 255, 255, .94);
+    backdrop-filter: blur(12px)
+}
+
+.sidebar h2 {
+    color: #183b4e;
+    letter-spacing: -.3px
+}
+
+.sidebar h2::first-letter { color: #f4a340 }
+.user { border: 1px solid #d8eee3; box-shadow: 0 5px 14px #087f7810 }
+.logout { color: #526d70; transition: background .2s, color .2s }
+.logout:hover { background: #fff0d8; color: #a56b10 }
+.simple-page { max-width: 1220px; padding-top: 32px }
+.main { max-width: 1280px; padding-top: 32px }
+.panel, .question-card { border: 1px solid #e7eee9; box-shadow: 0 8px 24px #174d3a0b }
+.panel:hover { box-shadow: 0 12px 28px #174d3a12 }
+.page-header { border-bottom-color: #dcebe4 }
+.tabs button { color: #526d70; cursor: pointer; transition: background .2s, color .2s }
+.tabs button:hover { background: #e5f6ed }
+.podium { align-items: end }
+.ranking div { border: 1px solid #e7eee9; box-shadow: 0 3px 9px #174d3a08; transition: transform .2s }
+.ranking div:hover { transform: translateX(4px) }
+.ranking .you { border-color: #8fd5ae }
+.highlights { border-color: #dcebe4; box-shadow: 0 8px 22px #174d3a0b }
+.quiz-page { max-width: 1120px; padding-top: 32px }
+.question-card { border-top: 5px solid #f4a340 }
+.answer { transition: transform .15s, border-color .15s, background .15s; border-color: #dbe8e1 }
+.answer:hover { transform: translateX(4px); border-color: #087f78; background: #f2fbf7 }
+.answer.correct.selected { box-shadow: 0 0 0 3px #bfe9cf }
+.chart { color: #087f78; text-shadow: 0 4px 0 #bfe9cf }
+.subject { border-color: #dcebe4; box-shadow: 0 5px 14px #174d3a08 }
+.subject:nth-child(3n + 1) { border-top: 4px solid #36b56b }
+.subject:nth-child(3n + 2) { border-top: 4px solid #3a9bd5 }
+.subject:nth-child(3n) { border-top: 4px solid #f4a340 }
+.button-link { box-shadow: 0 5px 10px #087f7826; transition: transform .2s, box-shadow .2s }
+.button-link:hover { transform: translateY(-2px); box-shadow: 0 8px 15px #087f7833 }
+
+/* Ocean Classroom theme */
+body { color: #172b4d }
+body.app-body { background: radial-gradient(circle at 90% 4%, #dceeff 0, transparent 25%), linear-gradient(135deg, #f7fbff 0%, #eef5fb 100%) }
+.login-page { background: linear-gradient(135deg, #edf8ff, #fffaf2) }
+.login-left { border-color: #b9d9f4; background: linear-gradient(145deg, #e5f5ff 0%, #f8fbff 56%, #fff1e8 100%) }
+.login-left h1 { color: #15539a }
+.login-left h1 em, .lab-kicker { color: #e66e4c }
+.lab-status { color: #15539a; background: #d9edff }
+.login-left p, .study-board strong { color: #405b78 }
+.subject-chips span { border-color: #c9e0f5; color: #15539a }
+.study-board b, .form-back { color: #15539a }
+.mini-progress i { background: #e66e4c }
+.lab-footer { color: #15539a }
+.login-card button, .button-link, .quiz-actions button:last-child, .quest-action { background: #2774e6 }
+.login-card button:hover, .button-link:hover, .quest-action:hover { background: #15539a }
+.forgot, .small a, .panel-heading>a, .recommend-card strong, .subject strong { color: #2774e6 }
+.app-body .sidebar { border-right-color: #d7e7f5; background: rgba(255,255,255,.95) }
+.user { border-color: #cfe5f8; background: #e8f4ff }
+.sidebar nav a.active, .sidebar nav a:hover { background: #2774e6 }
+.sidebar h2 { color: #172b4d }
+.logout:hover { background: #fff0e9; color: #c85338 }
+.hero { background: linear-gradient(120deg, #e2f3ff 0%, #fff0e8 100%); border-color: #cfe5f8 }
+.game-hero { background: linear-gradient(120deg, #e2f3ff 0%, #fff0e8 100%) }
+.panel, .question-card { border-color: #deebf6; box-shadow: 0 8px 24px #173a5d12 }
+.level-badge, .avatar-ring b { background: #15539a }
+.xp-track span { background: linear-gradient(90deg, #2774e6, #45a7e8) }
+.progress span, .bar span { background: #45a7e8 }
+.level-heading strong, .stat-note, .quest-reward, .green-text, .badge-card small { color: #2774e6 }
+.mission-icon, .header-icon { background: #dceeff }
+.chest, .journey-banner { background: #fff0e8; border-color: #f2c7b8 }
+.claim-button, .quest-card-orange .quest-action, .chest-progress span { background: #e66e4c }
+.quest-banner { background: linear-gradient(105deg, #fff0e8, #fffaf2); border-color: #f2c7b8 }
+.quest-banner-art { box-shadow: 0 5px 10px #e66e4c2e }
+.quest-card { border-color: #deebf6; border-left-color: #45a7e8 }
+.quest-card-blue { border-left-color: #2774e6 }
+.quest-card-orange { border-left-color: #e66e4c }
+.quest-card-green { border-left-color: #45a7e8 }
+.quest-type, .quest-crown small, .quest-action { color: #15539a }
+.quest-action { color: #fff }
+.quest-side { background: linear-gradient(160deg, #e7f4ff, #f6fbff); border-color: #cfe5f8 }
+.quest-side h3, .section-title h2, .quest-card h3, .quest-stats b, .game-page-header h1, .register-card h2 { color: #172b4d }
+.chest-button { border-color: #cfe5f8; color: #15539a }
+.question-card { border-top-color: #e66e4c }
+.answer:hover { border-color: #2774e6; background: #eef7ff }
+.answer.correct.selected { border-color: #45a7e8; box-shadow: 0 0 0 3px #c9e5fb }
+.quiz-actions button { border-color: #2774e6 }
+.quiz-xp, .podium div strong, .ranking div small { color: #2774e6 }
+.selected-tab { background: #2774e6 !important }
+.podium-first { border-color: #e66e4c }
+.ranking .you { background: #e8f4ff; border-color: #9acaf1 }
+.xp-pill { background: #fff0e8; color: #c85338 }
+.profile-hero { background: linear-gradient(120deg, #e7f4ff, #fff) }
+.goal-grid div { background: #f1f7fc }
+.setting-row input { accent-color: #2774e6 }
+.subject:nth-child(3n + 1) { border-top-color: #45a7e8 }
+.subject:nth-child(3n + 2) { border-top-color: #2774e6 }
+.subject:nth-child(3n) { border-top-color: #e66e4c }
+
+/* Compact quest board for a single desktop viewport. */
+.quest-page-body .simple-page { padding-top: 18px; padding-bottom: 18px }
+.quest-page-body .quest-header { padding-bottom: 10px }
+.quest-page-body .quest-header h1 { font-size: 26px }
+.quest-page-body .quest-banner { padding: 12px 18px; margin-bottom: 10px; min-height: 72px }
+.quest-page-body .quest-banner-art { width: 44px; height: 44px; font-size: 24px }
+.quest-page-body .quest-banner h2 { font-size: 17px }
+.quest-page-body .quest-banner p { font-size: 10px }
+.quest-page-body .streak-dots i { width: 21px; height: 21px }
+.quest-page-body .quest-stats { gap: 9px; margin-bottom: 12px }
+.quest-page-body .quest-stats div { padding: 9px 12px }
+.quest-page-body .quest-stats span { font-size: 18px }
+.quest-page-body .quest-stats b { font-size: 13px }
+.quest-page-body .quest-main { gap: 10px }
+.quest-page-body .section-title h2 { font-size: 18px }
+.quest-page-body .quest-card { min-height: 142px; padding: 14px; gap: 8px }
+.quest-page-body .quest-card-icon { width: 38px; height: 38px; font-size: 20px }
+.quest-page-body .quest-card h3 { font-size: 14px; margin: 2px 0 }
+.quest-page-body .quest-card p { font-size: 10px; margin-bottom: 4px }
+.quest-page-body .quest-card-progress { margin-top: 4px }
+.quest-page-body .quest-action { padding: 7px 11px; font-size: 10px }
+.quest-page-body .quest-side { min-height: 294px; padding: 18px 16px }
+.quest-page-body .chest-large { width: 65px; height: 65px; margin: 12px auto 8px; font-size: 32px; border-width: 5px; box-shadow: 0 5px 0 #e9d592 }
+
+/* Night Adventure game palette. */
+body.app-body {
+    color: #f4f7ff;
+    background: radial-gradient(circle at 82% 0%, #263b70 0, transparent 30%), linear-gradient(135deg, #101a38 0%, #17264a 55%, #202447 100%)
+}
+.app-body .sidebar { background: #0b1430; border-right-color: #263a68 }
+.app-body .sidebar .user { background: #162653; border-color: #38548d; box-shadow: 0 8px 18px #050b1c80 }
+.app-body .sidebar nav a, .app-body .logout { color: #c7d5f5 }
+.app-body .sidebar nav a.active, .app-body .sidebar nav a:hover { background: #f2764f; border-color: #ffae63; box-shadow: 0 5px 0 #a74943 }
+.app-body .main, .app-body .simple-page { color: #f4f7ff }
+.app-body .game-page-header p, .app-body .topbar { color: #afc0e4 }
+.app-body .game-page-header h1 { color: #172b4d }
+.app-body .game-page-header p { color: #50657f }
+.app-body .section-title h2, .app-body .quest-card h3 { color: #fff }
+.app-body .panel, .app-body .question-card, .app-body .stats>div, .app-body .progress-summary>div { background: #1c2b51; border-color: #344c80; box-shadow: 0 10px 25px #050b1c66 }
+.app-body .panel:hover { box-shadow: 0 14px 30px #050b1c99 }
+.app-body .hero, .app-body .game-hero { background: linear-gradient(120deg, #1b3d65 0%, #3b2d5c 100%); border-color: #456899 }
+.app-body .hero h1 { color: #172b4d }
+.app-body .hero p { color: #405b78 }
+.app-body .panel h2, .app-body .panel h3 { color: #fff }
+.app-body .muted, .app-body .panel p, .app-body .stats small, .app-body .progress-summary small, .app-body .quest-copy small { color: #aebedc }
+.app-body .level-card { border-top-color: #ffd166 }
+.app-body .level-heading strong, .app-body .stat-note, .app-body .green-text { color: #ffd166 }
+.app-body .level-badge { background: #2774e6; box-shadow: 0 6px 0 #173e93 }
+.app-body .xp-track, .app-body .progress { background: #0e1835 }
+.app-body .xp-track span, .app-body .progress span, .app-body .bar span { background: linear-gradient(90deg, #24d2c0, #69e7f2) }
+.app-body .quest-icon.blue, .app-body .mission-icon, .app-body .header-icon { background: #263c70 }
+.app-body .quest-icon.orange, .app-body .chest { background: #553c4c }
+.app-body .quest-icon.purple { background: #303362 }
+.app-body .claim-button, .app-body .quest-card-orange .quest-action, .app-body .chest-progress span { background: #f2764f }
+.app-body .claim-button:hover, .app-body .quest-card-orange .quest-action:hover { background: #ff9b5f }
+.app-body .quest-reward, .app-body .quiz-xp, .app-body .xp-pill { color: #ffd166 }
+.app-body .grid2 .panel, .app-body .quest-list .quest { border-color: #344c80 }
+.app-body .recommend-card, .app-body .ranking div, .app-body .leaderboard-board .podium div { background: #22345e; border-color: #3b568b; color: #fff }
+.app-body .recommend-card small, .app-body .ranking div small, .app-body .podium div small { color: #aebedc }
+.app-body .leaderboard-board { background: linear-gradient(145deg, #17264a, #292746); border-color: #3d568e }
+.app-body .leaderboard-board .podium-first { background: #493451; border-color: #f2764f; box-shadow: 0 7px 0 #8e4d4d }
+.app-body .leaderboard-board .ranking .you { background: #4a3a3a; border-color: #ffd166; box-shadow: 0 4px 0 #a46d36 }
+.app-body .tabs button { background: #1b2b52; border-color: #405b91; color: #c7d5f5 }
+.app-body .tabs button.selected-tab { background: #2774e6 !important; color: #fff }
+
+/* Bright game-world palette. */
+body.app-body {
+    background: radial-gradient(circle at 88% 5%, #d9f7e9 0, transparent 25%), linear-gradient(135deg, #eef7ff 0%, #fff8e5 100%)
+}
+.app-body .sidebar { background: #102f4f; border-right-color: #214c6b; color: #fff }
+.app-body .sidebar h2 { color: #fff }
+.app-body .user { background: #194467; border-color: #326884; color: #fff }
+.app-body .user small { color: #b9d9e8 }
+.app-body .sidebar nav a, .app-body .logout { color: #d8edf6 }
+.app-body .sidebar nav a.active, .app-body .sidebar nav a:hover { background: #f0784f; color: #fff; border-color: #ff9b68 }
+.app-body .sidebar nav a::before { color: #ffd166 }
+.app-body .logout { color: #b9d9e8 }
+.app-body .logout:hover { background: #713f58; color: #fff }
+.app-body .button-link, .app-body .quest-action { background: #087f78; box-shadow: 0 5px 0 #075c58 }
+.app-body .button-link:hover, .app-body .quest-action:hover { background: #f0784f; box-shadow: 0 5px 0 #c6533d }
+.app-body .hero, .app-body .game-hero { background: linear-gradient(120deg, #d8f7ed 0%, #fff0c9 100%); border-color: #b7dfd4 }
+.app-body .level-card { border-top: 4px solid #ffd166 }
+.app-body .xp-track span { background: linear-gradient(90deg, #087f78, #ffd166) }
+.app-body .stat-card:nth-child(1) { border-top: 4px solid #ffd166 }
+.app-body .stat-card:nth-child(2) { border-top: 4px solid #45a7e8 }
+.app-body .stat-card:nth-child(3) { border-top: 4px solid #a477d8 }
+.app-body .stat-card:nth-child(4) { border-top: 4px solid #f0784f }
+.app-body .quest-reward, .app-body .quiz-xp { color: #f0784f }
+.app-body .progress span, .app-body .bar span { background: #087f78 }
+.app-body .hero-art { border-color: #f2c66d; box-shadow: 0 8px 0 #f2dca5 }
+.quest-page-body .quest-side p { margin: 5px 0 10px; font-size: 10px }
+
+/* Unified Bright Adventure theme. */
+body.app-body {
+    color: #17324d;
+    background: radial-gradient(circle at 88% 4%, #d9f6eb 0, transparent 25%), radial-gradient(circle at 8% 92%, #fff0cf 0, transparent 23%), #f5f9fc
+}
+.app-body .sidebar { background: #173b5b; border-right: 1px solid #2e5b79 }
+.app-body .sidebar h2 { color: #fff }
+.app-body .sidebar .user { background: #224c70; border-color: #477a99; box-shadow: 0 8px 18px #12304d30 }
+.app-body .sidebar nav a, .app-body .logout { color: #dceef6 }
+.app-body .sidebar nav a.active, .app-body .sidebar nav a:hover { background: #f47750; border-color: #ffac6c; box-shadow: 0 4px 0 #bd5543; color: #fff }
+.app-body .sidebar nav a::before { color: #ffd166 }
+.app-body .logout { color: #b9d9e8 }
+.app-body .logout:hover { background: #2a5b70; color: #fff }
+.app-body .main, .app-body .simple-page { color: #17324d }
+.app-body .topbar { color: #507087 }
+.app-body .game-page-header h1, .app-body .game-page-header p { color: #17324d }
+.app-body .hero, .app-body .game-hero { background: linear-gradient(120deg, #d9f6eb, #fff0cf); border-color: #b9dfd5 }
+.app-body .hero h1 { color: #17324d }
+.app-body .hero p { color: #476477 }
+.app-body .panel, .app-body .question-card, .app-body .stats>div, .app-body .progress-summary>div { background: #fff; border-color: #d6e5ed; color: #17324d; box-shadow: 0 8px 22px #173b5b12 }
+.app-body .panel:hover { box-shadow: 0 12px 26px #173b5b20 }
+.app-body .panel h2, .app-body .panel h3, .app-body .section-title h2 { color: #17324d }
+.app-body .muted, .app-body .panel p, .app-body .stats small, .app-body .progress-summary small, .app-body .quest-copy small { color: #5c7180 }
+.app-body .level-card { border-top: 4px solid #ffd166 }
+.app-body .level-heading strong, .app-body .stat-note, .app-body .green-text { color: #087f78 }
+.app-body .level-badge { background: #2774e6; box-shadow: 0 5px 0 #174c9d }
+.app-body .xp-track, .app-body .progress { background: #e3edf0 }
+.app-body .xp-track span, .app-body .progress span, .app-body .bar span { background: linear-gradient(90deg, #087f78, #45c6a6) }
+.app-body .quest-reward, .app-body .quiz-xp, .app-body .xp-pill { color: #e76543 }
+.app-body .claim-button, .app-body .quest-card-orange .quest-action, .app-body .chest-progress span { background: #f47750 }
+.app-body .claim-button:hover, .app-body .quest-card-orange .quest-action:hover { background: #e85d3f }
+.app-body .button-link, .app-body .quest-action { background: #087f78; box-shadow: 0 4px 0 #075b57 }
+.app-body .button-link:hover, .app-body .quest-action:hover { background: #f47750; box-shadow: 0 4px 0 #bd5543 }
+.app-body .subject, .app-body .recommend-card, .app-body .ranking div, .app-body .leaderboard-board .podium div { background: #fff; border-color: #d6e5ed; color: #17324d }
+.app-body .subject b, .app-body .subject small { color: #17324d }
+.app-body .subject small, .app-body .recommend-card small, .app-body .ranking div small, .app-body .podium div small { color: #5c7180 }
+.app-body .subject strong, .app-body .recommend-card strong { color: #2774e6 }
+.app-body .recommend-card.purple-card { background: #eee7ff; border-color: #cbb9f4 }
+.app-body .recommend-card.orange-card { background: #fff0d6; border-color: #f3cd8d }
+.app-body .recommend-card.blue-card { background: #e3f2ff; border-color: #afd7f1 }
+.app-body .recommend-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px #173b5b20 }
+.app-body .journey-banner { background: #fff0cf; border-color: #f0d28c }
+.app-body .journey-banner b { color: #17324d }
+.app-body .journey-banner small { color: #5c7180 }
+.app-body .quest-card { background: #fff; border-color: #d6e5ed }
+.app-body .quest-card h3 { color: #17324d }
+.app-body .quest-card p, .app-body .quest-card-progress small { color: #5c7180 }
+.app-body .quest-banner { background: linear-gradient(105deg, #fff0cf, #fffaf0); border-color: #f0d28c }
+.app-body .quest-banner h2 { color: #17324d }
+.app-body .quest-banner p { color: #6d5a4f }
+.app-body .quest-side { background: linear-gradient(160deg, #e3f2ff, #f5fbff); border-color: #bddcf1 }
+.app-body .quest-side h3 { color: #17324d }
+.app-body .quest-side p, .app-body .quest-side>small { color: #5c7180 }
+.app-body .leaderboard-board { background: linear-gradient(145deg, #fff, #f7fbff); border-color: #d6e5ed }
+.app-body .leaderboard-board .podium-first { background: #fff0cf; border-color: #f47750; box-shadow: 0 7px 0 #f0d28c }
+.app-body .leaderboard-board .ranking .you { background: #e3f2ff; border-color: #45a7e8; box-shadow: 0 4px 0 #b8d9ef }
+.app-body .tabs button { background: #fff; border-color: #d6e5ed; color: #456377 }
+.app-body .tabs button.selected-tab { background: #2774e6 !important; color: #fff }
+.app-body .goal-grid div { background: #f2f8fb; color: #17324d }
+.app-body .goal-grid b, .app-body .setting-row b { color: #17324d }
+.app-body .goal-grid small, .app-body .setting-row small { color: #5c7180 }
+.app-body .setting-row { border-bottom-color: #d6e5ed }
+.app-body .profile-hero { background: linear-gradient(120deg, #e3f2ff, #fff) }
+
+/* Final contrast pass for mixed light and dark game sections. */
+.app-body .topbar { color: #50657f }
+.app-body .game-page-header h1 { color: #172b4d }
+.app-body .game-page-header p { color: #50657f }
+.app-body .hero h1 { color: #172b4d }
+.app-body .hero p { color: #405b78 }
+.app-body .section-title h2 { color: #172b4d }
+.app-body .subject b { color: #172b4d }
+.app-body .subject > span { color: #172b4d }
+.app-body .subject small { color: #50657f }
+.app-body .journey-banner b { color: #172b4d }
+.app-body .journey-banner small { color: #50657f }
+.app-body .journey-banner { background: #fff0c9; border-color: #f2c66d }
+.app-body .quest-card { background: #22345e; border-color: #3b568b }
+.app-body .quest-card h3 { color: #fff }
+.app-body .quest-card p, .app-body .quest-card-progress small { color: #aebedc }
+.app-body .quest-card .quest-type { color: #58d8ed }
+.app-body .quest-card-title strong { color: #ffd166 }
+.app-body .quest-date { color: #5c7180 }
+.app-body .quest-banner h2 { color: #172b4d }
+.app-body .quest-banner p { color: #6d5a4f }
+.app-body .game-quiz-top { color: #172b4d }
+.app-body .game-quiz-top b, .app-body .game-quiz-top #quiz-counter { color: #172b4d }
+.app-body .goal-grid div { background: #22345e; color: #fff }
+.app-body .goal-grid small, .app-body .setting-row small { color: #aebedc }
+.app-body .goal-grid b, .app-body .setting-row b { color: #fff }
+.app-body .setting-row { border-bottom-color: #344c80 }
+
+/* Settings uses light panels, so its labels must stay dark. */
+.app-body .setting-row b { color: #17324d }
+.app-body .setting-row small { color: #5c7180 }
+
+.ai-plan, .ai-generator { display: flex; align-items: center; justify-content: space-between; gap: 20px; background: linear-gradient(105deg, #e8fbf6, #eef5ff); border: 1px solid #b9dfd5 }
+.ai-plan h3, .ai-generator h2 { margin: 4px 0; color: #17324d }
+.ai-plan p, .ai-generator p { margin: 0; color: #5c7180 }
+.ai-plan-button { border: 0; border-radius: 8px; padding: 10px 14px; background: #087f78; color: #fff; cursor: pointer; font-weight: 800; white-space: nowrap }
+.ai-plan-button:hover { background: #f47750 }
+.ai-generator-controls { display: flex; align-items: center; gap: 10px }
+.ai-generator-controls select { padding: 10px; border: 1px solid #b9d6e6; border-radius: 8px; color: #17324d; background: #fff }
+
+@media(max-width:550px) {
+    .ai-plan, .ai-generator { align-items: flex-start; flex-direction: column }
+    .ai-generator-controls { width: 100%; flex-wrap: wrap }
+    .ai-generator-controls select { flex: 1; min-width: 150px }
+}
+
+@media(min-width:801px) {
+    .quest-page-body .simple-page { max-width: none; margin: 0; padding: 8px 34px 8px 28px }
+    .quest-page-body .quest-header { padding-bottom: 5px }
+    .quest-page-body .quest-header h1 { font-size: 27px }
+    .quest-page-body .quest-header p { font-size: 12px }
+    .quest-page-body .quest-banner { min-height: 58px; padding: 8px 14px }
+    .quest-page-body .quest-banner-art { width: 38px; height: 38px; font-size: 20px }
+    .quest-page-body .quest-banner h2 { font-size: 15px }
+    .quest-page-body .quest-stats { margin-bottom: 8px }
+    .quest-page-body .quest-stats div { padding: 6px 9px }
+    .quest-page-body .quest-layout { min-height: calc(100vh - 300px); align-items: stretch }
+    .quest-page-body .quest-main { gap: 7px; grid-template-rows: auto 1fr 1fr; align-items: stretch }
+    .quest-page-body .quest-card { min-height: 132px; height: 100%; padding: 15px; gap: 6px }
+    .quest-page-body .quest-card-icon { width: 38px; height: 38px; font-size: 20px }
+    .quest-page-body .quest-card h3 { font-size: 15px }
+    .quest-page-body .quest-card p { font-size: 11px; line-height: 1.35 }
+    .quest-page-body .quest-card-progress { margin-top: 2px }
+    .quest-page-body .quest-side { min-height: 270px; height: 100%; padding: 18px }
+    .quest-page-body .chest-large { width: 70px; height: 70px; margin: 12px auto 7px; font-size: 34px }
+}
+
+/* Premium game sidebar */
+.sidebar {
+    width: 248px;
+    padding: 24px 16px 18px;
+    background: linear-gradient(180deg, #102f4a 0%, #123b5c 62%, #0d2942 100%);
+    border-right: 0;
+    box-shadow: 8px 0 24px #102f4a24;
+    color: #e9f5ff
+}
+.app-body .sidebar { background: linear-gradient(180deg, #102f4a 0%, #123b5c 62%, #0d2942 100%); color: #e9f5ff }
+.app-body { padding-left: 248px }
+.sidebar h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 8px 26px;
+    color: #fff;
+    font-size: 19px;
+    letter-spacing: -.4px
+}
+.sidebar h2::first-letter { color: #f4a340 }
+.user {
+    margin: 0 2px;
+    padding: 14px 12px;
+    border: 1px solid #5a88a8;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #1e5278, #174464);
+    box-shadow: 0 8px 18px #071d3026;
+    color: #fff
+}
+.user small { color: #b9d6e8 }
+.sidebar nav {
+    margin-top: 26px;
+    gap: 5px
+}
+.sidebar nav::before {
+    content: 'LEARNING HUB';
+    padding: 0 12px 8px;
+    color: #80acc8;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px
+}
+.sidebar nav a,
+.sidebar .logout {
+    padding: 12px 13px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #d3e7f4;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background .2s, color .2s, transform .2s
+}
+.sidebar nav a:hover {
+    background: #1c5278;
+    color: #fff;
+    transform: translateX(3px)
+}
+.sidebar nav a.active {
+    background: linear-gradient(90deg, #2774e6, #358de9);
+    border-color: #5ba2ef;
+    color: #fff;
+    box-shadow: 0 6px 14px #2774e64d
+}
+.sidebar .logout {
+    margin: auto 2px 0;
+    border-top: 1px solid #3b6380;
+    border-radius: 0;
+    padding-top: 18px;
+    color: #a9c8da
+}
+.sidebar .logout:hover { background: #743c4c; color: #fff; transform: none }
+
+/* Use one clean icon language instead of mixed emoji in the sidebar. */
+.sidebar h2 { font-size: 19px; color: #fff }
+.sidebar h2::after { content: none }
+.sidebar nav a,
+.sidebar .logout { font-size: 0 }
+.sidebar nav a::before,
+.sidebar .logout::before { display: inline-block; width: 25px; color: #8fc7e8; font-size: 16px; font-weight: 700; vertical-align: -1px }
+.sidebar nav a::after,
+.sidebar .logout::after { color: #d3e7f4; font-size: 13px; font-weight: 600 }
+.sidebar nav a[href="dashboard.html"]::before { content: '⌂' }
+.sidebar nav a[href="dashboard.html"]::after { content: 'Home' }
+.sidebar nav a[href="subjects.html"]::before { content: '▤' }
+.sidebar nav a[href="subjects.html"]::after { content: 'Subjects' }
+.sidebar nav a[href="quests.html"]::before { content: '✦' }
+.sidebar nav a[href="quests.html"]::after { content: 'Quests' }
+.sidebar nav a[href="leaderboard.html"]::before { content: '♛' }
+.sidebar nav a[href="leaderboard.html"]::after { content: 'Leaderboard' }
+.sidebar nav a[href="awards.html"]::before { content: '◆' }
+.sidebar nav a[href="awards.html"]::after { content: 'Awards' }
+.sidebar nav a[href="progress.html"]::before { content: '↗' }
+.sidebar nav a[href="progress.html"]::after { content: 'Progress' }
+.sidebar nav a[href="profile.html"]::before { content: '●' }
+.sidebar nav a[href="profile.html"]::after { content: 'Profile' }
+.sidebar nav a[href="settings.html"]::before { content: '⚙' }
+.sidebar nav a[href="settings.html"]::after { content: 'Settings' }
+.sidebar .logout::before { content: '↪' }
+.sidebar .logout::after { content: 'Logout' }
+.sidebar nav a.active::before,
+.sidebar nav a.active::after { color: #fff }
+
+@media(max-width:800px) {
+    .sidebar { width: 200px }
+    .app-body { padding-left: 200px }
+}
+
+@media(max-width:550px) {
+    .app-body { padding-left: 0 }
+}
+
+@media(max-width:550px) {
+    .quest-page-body .simple-page { padding-top: 15px; padding-bottom: 15px }
+    .quest-page-body .quest-banner { min-height: 0 }
+    .quest-page-body .quest-stats { margin-bottom: 16px }
+    .quest-page-body .quest-card { min-height: 160px }
+    .quest-page-body .quest-side { min-height: 260px }
+}

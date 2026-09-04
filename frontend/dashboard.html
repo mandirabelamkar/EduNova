@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduNova - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-body">
+<div class="app">
+  <aside class="sidebar">
+    <h2 class="sidebar-brand"><span class="brand-mark" aria-hidden="true">E</span><span>EduNova</span></h2>
+    <div class="user">👧🏻 <b>Hello, <span data-user-name>Ananya</span>!</b><small>Level <span data-user-level>1</span> Learner</small></div>
+    <nav>
+      <a class="active" href="dashboard.html">🏠 Home</a>
+      <a href="subjects.html">📖 Subjects</a>
+      <a href="quests.html">♕ Quests</a><a href="leaderboard.html">🏆 Leaderboard</a>
+      <a href="awards.html">🎁 Awards</a><a href="progress.html">📈 Progress</a>
+      <a href="profile.html">👤 Profile</a><a href="settings.html">⚙ Settings</a>
+    </nav>
+    <a class="logout" href="index.html">↪ Logout</a>
+  </aside>
+  <main class="main">
+    <header class="topbar"><span>🗺️ <span data-user-name>Ananya</span>'s learning world</span><span>🪙 <b id="coin-count">230</b>　🔔</span></header>
+    <section class="hero game-hero"><div><span class="eyebrow">LEVEL 1 • NEW EXPLORER</span><h1>Ready for your first quest?</h1><p>Complete missions, collect XP, and unlock new worlds.</p><a class="button-link hero-button" href="quiz.html?subject=math">Start a quest <span>→</span></a></div><div class="hero-art" aria-label="Learning journey"><span class="journey-star">✦</span><span class="journey-badge">+XP</span><span class="journey-book">📖</span><span class="journey-path"></span><span class="journey-trophy">🏆</span></div></section>
+    <section class="level-card panel"><div class="level-heading"><div class="level-badge">1</div><div><span class="eyebrow">CURRENT LEVEL</span><h2>New Explorer</h2><small><span id="xp-count">0</span> / 600 XP to Level 2</small></div><strong id="level-percent">0%</strong></div><div class="xp-track"><span id="xp-bar" style="width:0"></span></div><div class="level-footer"><span>✨ First unlock: Star Compass</span><a href="progress.html">View progress</a></div></section>
+    <section class="stats">
+      <div class="stat-card xp-stat">⭐ <b id="dashboard-xp">0</b><small>Total XP</small><span class="stat-note">Start earning XP</span></div><div class="stat-card">👑 <b id="dashboard-level">1</b><small>Level</small><span class="stat-note">New Explorer</span></div>
+      <div class="stat-card">🏅 <b id="dashboard-badges">0</b><small>Badges</small><span class="stat-note">Your first badge awaits</span></div><div class="stat-card streak-stat">🔥 <b id="dashboard-streak">0</b><small>Day Streak</small><span class="stat-note">Start a new streak today</span></div>
+    </section>
+    <div class="grid2">
+      <section class="panel mission-panel"><div class="panel-heading"><div><span class="eyebrow">MAIN MISSION</span><h3>Fractions - Basics</h3></div><span class="mission-icon">🧮</span></div><p class="muted">Mathematics · Class 6</p><div class="mission-progress"><div><b>70% complete</b><span>+10 XP per answer</span></div><div class="progress"><span style="width:70%"></span></div></div><a class="button-link" href="quiz.html?subject=math">Continue learning <span>→</span></a></section>
+      <section class="panel reward-panel"><div class="panel-heading"><div><span class="eyebrow">DAILY REWARD</span><h3>Open your chest</h3></div><span class="chest">🎁</span></div><p class="muted">Keep your streak alive and claim today's surprise.</p><button class="claim-button" onclick="claimDailyReward(this)">Claim +15 coins</button></section>
+    </div>
+    <section class="panel quests-panel"><div class="panel-heading"><div><span class="eyebrow">TODAY'S MISSIONS</span><h3>Earn extra XP</h3></div><a href="quests.html">See all quests →</a></div><div class="quest-list"><div class="quest quest-item" data-quest="math"><span class="quest-icon blue">📝</span><div class="quest-copy"><b>Solve 5 math questions</b><small>0 of 5 complete</small><div class="progress"><span style="width:0%"></span></div></div><span class="quest-reward">+20 XP</span><button class="quest-claim" onclick="claimQuest(this, 20)">Claim</button></div><div class="quest quest-item" data-quest="reading"><span class="quest-icon orange">📖</span><div class="quest-copy"><b>Read for 10 minutes</b><small>0 of 10 complete</small><div class="progress"><span style="width:0%"></span></div></div><span class="quest-reward">+15 XP</span><button class="quest-claim" onclick="claimQuest(this, 15)">Claim</button></div><div class="quest quest-item" data-quest="subject"><span class="quest-icon purple">⚡</span><div class="quest-copy"><b>Practice a new subject</b><small>Ready to start</small><div class="progress"><span style="width:0%"></span></div></div><span class="quest-reward">+25 XP</span><button class="quest-claim" onclick="claimQuest(this, 25)">Claim</button></div></div></section>
+    <section class="ai-plan panel"><div><span class="eyebrow">AI LEARNING GUIDE</span><h3>Your next best move</h3><p id="ai-plan-text">Your AI coach is preparing a short practice plan.</p></div><button class="ai-plan-button" onclick="showAiPlan()">✨ Build my plan</button></section>
+    <section class="panel"><div class="panel-heading"><div><span class="eyebrow">NEXT ADVENTURES</span><h3>Choose your path</h3></div></div><div class="recommend"><a href="quiz.html?subject=math" class="recommend-card purple-card"><span>🟣</span><b>Decimals</b><small>Quick practice · +30 XP</small><strong>Play →</strong></a><a href="quiz.html?subject=math" class="recommend-card orange-card"><span>🔺</span><b>Geometry</b><small>New adventure · +25 XP</small><strong>Play →</strong></a><a href="quiz.html?subject=math" class="recommend-card blue-card"><span>📊</span><b>Data Handling</b><small>Skill builder · +20 XP</small><strong>Play →</strong></a></div></section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

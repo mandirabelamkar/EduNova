@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduNova - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-left">
+      <div class="learning-lab-top"><span class="brand"><span class="brand-mark" aria-hidden="true">E</span></span><span class="lab-status">● LIVE LEARNING</span></div>
+      <span class="lab-kicker">YOUR LEARNING LAB</span>
+      <h1>Build skills.<br><em>Unlock your future.</em></h1>
+      <p>Explore subjects, complete quests, and make every lesson count.</p>
+      <div class="subject-chips"><span>∑ Maths</span><span>⚗ Science</span><span>文 Languages</span></div>
+      <div class="study-scene"><div class="study-board"><span>⭐</span><b>Today's goal</b><strong>Learn something new</strong><div class="mini-progress"><i></i></div></div><div class="desk"><span class="desk-lamp">💡</span><span class="student">🧑🏽‍🎓</span><span class="open-book">📖</span></div></div>
+      <div class="lab-footer"><span>⚡ Start your streak</span><span>🏅 12 badges collected</span></div>
+    </div>
+    <div class="login-card">
+      <select class="language" aria-label="Language"><option>English</option></select>
+      <h2>Welcome Back!</h2>
+      <p>Login to continue your learning journey</p>
+      <label for="email">Mobile Number / Email</label>
+      <input id="email" type="text" placeholder="Enter mobile number or email">
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Enter password">
+      <a class="forgot" href="forgot-password.html">Forgot Password?</a>
+      <button onclick="login()">Login</button>
+      <p class="small">Don't have an account? <a href="register.html">Register</a></p>
+      <hr>
+      <button class="guest" onclick="guestLogin()">♙ Continue as Guest</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

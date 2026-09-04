@@ -1,0 +1,60 @@
+{
+  "users": {
+    "guest@edunova.local": {
+      "password": "",
+      "user": {
+        "name": "Ananya",
+        "level": 1,
+        "xp": 0,
+        "coins": 0,
+        "badges": 0,
+        "streak": 0
+      },
+      "quests": {
+        "math": {
+          "progress": 0,
+          "goal": 5,
+          "reward": 20,
+          "claimed": false
+        },
+        "reading": {
+          "progress": 0,
+          "goal": 10,
+          "reward": 15,
+          "claimed": false
+        },
+        "subject": {
+          "progress": 0,
+          "goal": 1,
+          "reward": 25,
+          "claimed": false
+        }
+      },
+      "quiz": {
+        "question": 1,
+        "total": 50,
+        "correct": 0,
+        "answered": false,
+        "subject": "math"
+      }
+    }
+  },
+  "quiz": {
+    "subject": "science",
+    "question": 1,
+    "total": 50,
+    "answered": false
+  },
+  "user": {
+    "xp": 20,
+    "level": 1
+  },
+  "quests": {
+    "math": {
+      "progress": 0,
+      "goal": 5,
+      "reward": 20,
+      "claimed": true
+    }
+  }
+}

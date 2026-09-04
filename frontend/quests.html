@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Quests - EduNova</title><link rel="stylesheet" href="style.css"></head>
+<body class="app-body quest-page-body">
+<aside class="sidebar">
+	<h2 class="sidebar-brand"><span class="brand-mark" aria-hidden="true">E</span><span>EduNova</span></h2><div class="user">👧🏻 <b>Hello, <span data-user-name>Ananya</span>!</b><small>Level <span data-user-level>1</span> Learner</small></div>
+	<nav><a href="dashboard.html">🏠 Home</a><a href="subjects.html">📖 Subjects</a><a class="active" href="quests.html">♕ Quests</a><a href="leaderboard.html">🏆 Leaderboard</a><a href="awards.html">🎁 Awards</a><a href="progress.html">📈 Progress</a><a href="profile.html">👤 Profile</a><a href="settings.html">⚙ Settings</a></nav>
+	<a class="logout" href="index.html">↪ Logout</a>
+</aside>
+<div class="simple-page">
+<header class="page-header game-page-header quest-header"><div><span class="eyebrow">MISSION CONTROL</span><h1>Daily quests</h1><p>Small wins today build your next big adventure.</p></div><div class="quest-crown">♕<small>+60 XP available</small></div></header>
+<section class="quest-banner"><div class="quest-banner-art">🔥</div><div><span class="eyebrow">STREAK START</span><h2>Start a new streak today!</h2><p>Complete one quest today to begin your explorer bonus.</p></div><div class="streak-dots"><i class="today">0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i><i>0</i></div></section>
+<section class="quest-stats"><div><span>⚡</span><b>60 XP</b><small>Available today</small></div><div><span>🎯</span><b>0 / 5</b><small>Quests completed</small></div><div><span>🪙</span><b>+35</b><small>Coins to collect</small></div><div><span>🏆</span><b>Level 1</b><small>New Explorer</small></div></section>
+<section class="quest-layout"><div class="quest-main"><div class="section-title"><div><span class="eyebrow">TODAY'S RUN</span><h2>Choose your challenges</h2></div><span class="quest-date">04 SEP · FRIDAY</span></div>
+<div class="quest-card quest-card-blue" data-quest="math"><div class="quest-card-icon">📝</div><div class="quest-card-content"><div class="quest-card-title"><div><span class="quest-type">MATH PATH</span><h3>Solve 5 Math Questions</h3></div><strong>+20 XP</strong></div><p>Sharpen your fractions skills and unlock the next map tile.</p><div class="quest-card-progress"><div class="progress"><span></span></div><small>Loading progress...</small></div></div><button class="quest-action" onclick="claimQuest(this,20)">Claim reward</button></div>
+<div class="quest-card quest-card-orange" data-quest="reading"><div class="quest-card-icon">📖</div><div class="quest-card-content"><div class="quest-card-title"><div><span class="quest-type">FOCUS CAMP</span><h3>Read for 10 minutes</h3></div><strong>+15 XP</strong></div><p>Spend a little quiet time with a story from your reading shelf.</p><div class="quest-card-progress"><div class="progress"><span></span></div><small>Loading progress...</small></div></div><button class="quest-action" onclick="claimQuest(this,15)">Claim reward</button></div>
+<div class="quest-card quest-card-green" data-quest="subject"><div class="quest-card-icon">⚡</div><div class="quest-card-content"><div class="quest-card-title"><div><span class="quest-type">NEW HORIZON</span><h3>Practice a new subject</h3></div><strong>+25 XP</strong></div><p>Try one question from a subject you have not explored today.</p><div class="quest-card-progress"><div class="progress"><span></span></div><small>Loading progress...</small></div></div><a class="quest-action" href="subjects.html">Explore subjects</a></div>
+ </div><aside class="quest-side"><div class="side-title"><span class="eyebrow">REWARD CHEST</span><span>🎁</span></div><div class="chest-large">🎁</div><h3>Daily explorer drop</h3><p>Complete all three quests to unlock a surprise reward.</p><div class="chest-progress"><span style="width:0"></span></div><small>0 of 3 quests done</small><button class="chest-button">Locked · 3 quests left</button></aside></section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

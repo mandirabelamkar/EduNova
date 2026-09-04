@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Subjects</title><link rel="stylesheet" href="style.css"></head>
+<body class="app-body subjects-page-body">
+<aside class="sidebar">
+  <h2 class="sidebar-brand"><span class="brand-mark" aria-hidden="true">E</span><span>EduNova</span></h2><div class="user">👧🏻 <b>Hello, <span data-user-name>Ananya</span>!</b><small>Level <span data-user-level>1</span> Learner</small></div>
+  <nav><a href="dashboard.html">🏠 Home</a><a class="active" href="subjects.html">📖 Subjects</a><a href="quests.html">♕ Quests</a><a href="leaderboard.html">🏆 Leaderboard</a><a href="awards.html">🎁 Awards</a><a href="progress.html">📈 Progress</a><a href="profile.html">👤 Profile</a><a href="settings.html">⚙ Settings</a></nav>
+  <a class="logout" href="index.html">↪ Logout</a>
+</aside>
+<div class="simple-page">
+<header class="page-header game-page-header"><div><span class="eyebrow">ADVENTURE MAP</span><h1>Choose your next world</h1><p>Every subject is a new path to XP and badges.</p></div><span class="header-icon">🗺️</span></header>
+<section class="subjects">
+  <a href="quiz.html?subject=math" class="subject math"><span>🧮</span><b>Mathematics</b><small>3 worlds · 450 XP</small><strong>Continue →</strong></a>
+  <a href="quiz.html?subject=science" class="subject science"><span>🧪</span><b>Science</b><small>2 worlds · 320 XP</small><strong>Continue →</strong></a>
+  <a href="quiz.html?subject=english" class="subject english"><span>📖</span><b>English</b><small>4 worlds · 280 XP</small><strong>Continue →</strong></a>
+  <a href="quiz.html?subject=marathi" class="subject marathi"><span>अ</span><b>Marathi</b><small>1 world · 120 XP</small><strong>Start quest →</strong></a>
+  <a href="quiz.html?subject=social" class="subject social"><span>🌍</span><b>Social Science</b><small>2 worlds · 210 XP</small><strong>Continue →</strong></a>
+  <a href="quiz.html?subject=gk" class="subject gk"><span>💡</span><b>General Knowledge</b><small>Daily challenge</small><strong>Start quest →</strong></a>
+</section>
+<section class="panel journey-banner"><span>🔥</span><div><b>Start your streak today</b><small>Complete one subject to begin your learning streak.</small></div><a class="button-link" href="quiz.html?subject=math">Play now</a></section>
+<section class="learning-trail"><div><span class="trail-icon">🧭</span><span><b>Your learning trail</b><small>Keep exploring to unlock the next reward.</small></span></div><div class="trail-step current"><b>Level <span data-user-level>1</span></b><small>Current world</small></div><span class="trail-line"></span><div class="trail-step"><b>⭐ Star Compass</b><small>Next unlock</small></div><span class="trail-line"></span><div class="trail-step"><b>600 XP</b><small>Goal to reach</small></div></section>
+<section class="ai-generator panel"><div><span class="eyebrow">AI PRACTICE LAB</span><h2>Generate a smart quest</h2><p>Choose a subject and get a fresh practice path.</p></div><div class="ai-generator-controls"><select id="ai-subject" aria-label="Practice subject"><option value="math">Mathematics</option><option value="science">Science</option><option value="english">English</option><option value="social">Social Science</option><option value="marathi">Marathi</option><option value="gk">General Knowledge</option></select><button class="button-link" onclick="generateAiQuiz()">🤖 Generate practice</button></div></section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
