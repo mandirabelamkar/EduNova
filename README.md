@@ -1,6 +1,6 @@
 # EduNova
 
-A gamified learning app for Smart India Hackathon with quizzes, quests, XP, badges, coins, leaderboard and daily streaks.
+A gamified learning platform with interactive quizzes, AI Coach guidance, personalized practice, XP, badges, coins, leaderboards and daily streaks.
 
 ## Project structure
 
