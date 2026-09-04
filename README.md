@@ -56,17 +56,7 @@ npm run dev
 
 After starting the server, register a new account or use the guest option. Each account has separate XP, quiz progress and streak data.
 
-## Enable the AI Coach API
-
-The AI key stays on the backend and is never placed in frontend files. In PowerShell, set it before starting the server:
-
-```powershell
-$env:OPENAI_API_KEY="your-api-key"
-$env:AI_MODEL="gpt-4o-mini"
-npm start
-```
-
-Then open a quiz and select **Ask AI Coach**. Without an API key, the built-in fallback explanation is used.
+The AI Coach, AI Practice Lab and personalized study plan currently use the app's built-in learning logic and do not require an API key.
 
 ## Stop the server
 
