@@ -186,6 +186,15 @@ const server = http.createServer((request, response) => {
   });
 });
 
+server.on('error', error => {
+  if (error.code === 'EADDRINUSE') {
+    console.error(`Port ${port} is already in use. Stop the existing EduNova server or run with another port, for example: $env:PORT=8010; npm start`);
+    process.exitCode = 1;
+    return;
+  }
+  console.error(error);
+});
+
 server.listen(port, () => {
   console.log(`EduNova running at http://localhost:${port}`);
 });

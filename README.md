@@ -35,6 +35,15 @@ The terminal should show:
 EduNova running at http://localhost:8000
 ```
 
+If you see `EADDRINUSE` or `Port 8000 is already in use`, the app is already running in another terminal. Use that existing server, or stop it with `Ctrl + C` and run `npm start` again. To use another port:
+
+```powershell
+$env:PORT=8010
+npm start
+```
+
+Then open `http://localhost:8010`.
+
 Open the app in a browser:
 
 ```text
